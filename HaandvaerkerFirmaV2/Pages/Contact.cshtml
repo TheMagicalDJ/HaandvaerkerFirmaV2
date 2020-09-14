@@ -1,0 +1,49 @@
+﻿@page
+@model HaandvaerkerFirmaV2.Pages.ContactModel
+@{
+}
+
+<div>
+    <div id="FormDiv1" class="col-md-6 float-md-left">
+        <form method="post">
+            <fieldset>
+                <legend>Kontaktformular</legend>
+                <div class="form-group">
+                    <label for="KFNavn1">Dit Navn</label>
+                    <input asp-for="@Model.KFNavn" type="text" class="form-control" id="KFNavn" name="KFNavn" placeholder="Indtast dit fornavn her...">
+                    <span asp-validation-for="KFNavn" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label for="KFMobilnummer1">Dit Mobilnummer</label>
+                    <input asp-for="@Model.KFMobilnummer" type="text" class="form-control" id="KFMobilnummer" name="KFMobilnummer" placeholder="Indtast dit mobilnummer her...">
+                    <span asp-validation-for="KFMobilnummer" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label for="KFEmail1">Din Email</label>
+                    <input asp-for="@Model.KFEmail" type="email" class="form-control" id="KFEmail" name="KFEmail" placeholder="Indtast din email her...">
+                    <span asp-validation-for="KFEmail" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label for="KFBesked1">Din Besked</label>
+                    <textarea asp-for="@Model.KFBesked" class="form-control" id="KFBesked" name="KFBesked" placeholder="Indtast din besked her..."></textarea>
+                    <span asp-validation-for="KFBesked" class="text-danger"></span>
+                </div>
+                <button name="KFEmailSubmit" type="submit">Send Formularen</button>
+            </fieldset>
+        </form>
+    </div>
+
+    <div id="FormDiv2" class="col-md-6 float-md-right">
+        <form method="post">
+            <fieldset>
+                <legend>Nyhedsbrev</legend>
+                <div class="form-group">
+                    <label for="NBEmail1">Email address</label>
+                    <input asp-for="@Model.NBEmail" type="email" class="form-control" id="NBEmail" name="NBEmail" placeholder="Indtast din email her...">
+                    <span asp-validation-for="NBEmail" class="text-danger"></span>
+                </div>
+                <button type="submit" name="NBEmailSubmit">Abonnér</button>
+            </fieldset>
+        </form>
+    </div>
+</div>
